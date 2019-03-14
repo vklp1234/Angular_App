@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Best of veera</title>
+	<link rel="stylesheet"  href="bootstrap/bootstrap.min.css">
+	<script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap/jquery.min.js"></script>
+	<link rel="stylesheet"  href="css/mdb.min.css">
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script type="text/javascript" src="js/myapp.js"></script>
+	<script type="text/javascript" src="js/mycrtl.js"></script>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/styl.js"></script>
+</head>
+<body>
+	<div ng-app="myapp" ng-controller="mycrtl"  > 
+	<!-- Material form contact -->
+<div class="container">    
+            
+    <div id="signupbox" style=" margin-top:10px;width: 800px; background-color:     beige;  " class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                
+                <div style=" font-size: 25px; position: relative; top:-10px; "><a id="signinlink" href="#"><u>Personal Information</u></a></div>
+            </div>  
+            <div class="panel-body" >
+                <form method="post" >
+                    <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+                            
+
+                    <form  class="form-horizontal" method="post" >
+                        <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+                        
+                       
+                        <div id="div_id_username" class="form-group required">
+                            <label for="id_username" class="control-label col-md-4  requiredField"> <b style="font-size: 14px;">Username</b><span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md  textinput textInput form-control" id="id_username" maxlength="30" name="u
+                                name" placeholder="Choose your username" ng-model="uname" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+                        <div id="div_id_email" class="form-group required">
+                            <label for="id_email" class="control-label col-md-4  requiredField"><b style="font-size: 14px;">E-mail</b><span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_email" name="email" placeholder="Your current email address" ng-model="email" style="margin-bottom: 10px" type="email" />
+                            </div>     
+                        </div>
+                        <div id="div_id_password1" class="form-group required">
+                            <label for="id_password1" class="control-label col-md-4  requiredField"><b style="font-size: 14px;">Password</b><span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "> 
+                                <input class="input-md textinput textInput form-control" id="id_password1" name="pass" placeholder="Create a password" ng-model="pass" style="margin-bottom: 10px" type="password" />
+                            </div>
+                        </div>
+                        
+                        <div id="div_id_name" class="form-group required"> 
+                            <label for="id_name" class="control-label col-md-4  requiredField"><b style="font-size: 14px;"> full name</b><span class="asteriskField">*</span> </label> 
+                            <div class="controls col-md-8 "> 
+                                <input class="input-md textinput textInput form-control" id="id_name" name="fname" placeholder="Your Frist name and Last name" ng-model="fname" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+                        <div id="div_id_gender" class="form-group required">
+                            <label for="id_gender"  class="control-label col-md-4  requiredField"><b style="font-size: 14px;"> Gender</b><span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "  style="margin-bottom: 10px">
+                                 <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_1" value="Male" ng-model="gender" style="margin-bottom: 10px">Male</label>
+                                 <label class="radio-inline"> <input type="radio" name="gender" id="id_gender_2" value="Female" ng-model="gender"  style="margin-bottom: 10px">Female </label>
+                            </div>
+                        </div>
+                      
+                       
+                        <div id="div_id_number" class="form-group required">
+                             <label for="id_number" class="control-label col-md-4  requiredField"><b style="font-size: 14px;"> contact number</b><span class="asteriskField">*</span> </label>
+                             <div class="controls col-md-8 ">
+                                 <input class="input-md textinput textInput form-control" id="id_number" name="cnumber" placeholder="provide your number" ng-model="cnumber" style="margin-bottom: 10px" type="text" />
+                            </div> 
+                        </div> 
+                        
+                        
+                                         <button ng-click="insert();" ng-if="addbtn"  class="btn btn-primary   waves-effect waves-light">ADD</button> 
+                                           <button  ng-click="update();" ng-if="updatebtn"  class="btn btn-info  waves-effect waves-light ">Update</button>
+                                           <hr>
+                                            <label for="id_number" style="font-size: 18px;" class="control-label col-md-4  requiredField">Search Name </label>
+                                            <input type="text" name="sname" ng-model="search">
+                                         
+                                   
+                            
+                    </form>
+                    <hr>
+                    <table border="1" class="table-responsive"  style=" border:1px solid lightgray;background-color:    honeydew;padding: 0px;  margin:5px auto; width: 100%; border-left: none;border-right: none;">
+
+        <tr >
+            <th style="padding: 5px; ">Username</th>
+            <th style="padding: 5px;" >gmail</th>
+            
+            <th style="padding: 5px;" >FullName</th>
+            <th style="padding: 5px;" >Gender</th>
+            <th  style="padding: 5px;" >contact Number</th>
+            <th  style="padding: 5px;" >Update</th>
+            <th  style="padding: 5px;">Delete</th>
+        </tr>
+        <tbody ng-init="select();">
+            <tr ng-repeat="items in item|filter:search">
+                <td  style="padding-left: 5px;">{{items.uname}}</td>
+                <td style="padding-left: 5px;">{{items.email}}</td>
+                
+                <td style="padding-left: 5px;">{{items.fname}}</td>
+                <td style="padding-left: 5px;">{{items.gender}}</td>
+                <td style="padding-left: 5px;">{{items.cnumber}}</td>
+                <td style="padding: 5px;"><button ng-click="edit(items.uname,items.email,items.fname,items.gender,items.cnumber)" class="btn btn-primary  waves-effect waves-light"> EDIT</button></td>
+                <td ><button ng-click="delete(items.uname)" class="btn btn-danger waves-effect waves-light">DELETE</button></td>
+        </tr>
+        </tbody>
+    </table>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    
+     
+    
+</div>
+</div>
+
+</body>
+</html>
